@@ -89,4 +89,4 @@ async def pomoc(ctx, command_for_help = None):
     else:
         await ctx.send("```Nie znaleziono komendy.```")
 
-client.run('')
+client.run('stuff')
