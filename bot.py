@@ -3,10 +3,8 @@ from discord.ext import commands
 import random
 import math
 
-# piv https://discord.gg/aH46DPW
-
-# https://discordapp.com/oauth2/authorize?client_id=677895248088662025&permissions=8&scope=bot              Admin
-# https://discordapp.com/api/oauth2/authorize?client_id=677895248088662025&permissions=518208&scope=bot     Non-admin
+# https://discordapp.com/oauth2/authorize?client_id=677895248088662025&permissions=8&scope=bot              Add bot with Admin permission
+# https://discordapp.com/api/oauth2/authorize?client_id=677895248088662025&permissions=518208&scope=bot     Add bot with Non-admin permissions
 
 client = commands.Bot(command_prefix = '!p ')
 
@@ -91,4 +89,4 @@ async def pomoc(ctx, command_for_help = None):
     else:
         await ctx.send("```Nie znaleziono komendy.```")
 
-client.run('Njc3ODk1MjQ4MDg4NjYyMDI1.Xka_NQ.qODpaswtZCKhMwHGqpd5tPhStbw')
+client.run('')
