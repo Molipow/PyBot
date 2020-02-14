@@ -89,4 +89,7 @@ async def pomoc(ctx, command_for_help = None):
     else:
         await ctx.send("```Nie znaleziono komendy.```")
 
-client.run('stuff')
+file = open("D:/PROGRAMOWANIE/Python/token.txt") # change to your token file
+token = file.readline()
+
+client.run(token)
