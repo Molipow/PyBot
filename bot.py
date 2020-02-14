@@ -91,5 +91,5 @@ async def pomoc(ctx, command_for_help = None):
 
 file = open("D:/PROGRAMOWANIE/Python/token.txt") # change to your token file
 token = file.readline()
-
+file.close()
 client.run(token)
