@@ -43,7 +43,6 @@ class Utilities(commands.Cog):
 
         await ctx.send(f"```Wyrzuciłeś {result}. {response}```")
         
-
     @commands.command()
     async def czyść(self, ctx, amount = 5):
         await ctx.channel.purge(limit = amount+1)
@@ -51,7 +50,7 @@ class Utilities(commands.Cog):
     @commands.command()
     async def pomoc(self, ctx, command_for_help = None):
         if command_for_help == None:
-            await ctx.send("```Komendy:\n  czyść\n  ping\n  pong\n  pomoc\n  rzuć\n  syntax\nNapisz `!py pomoc [komenda]` aby dostać dokładniejsze informacje.```")
+            await ctx.send("```Komendy:\n  czyść\n  ping\n  pong\n  pomoc\n  rzuć\n  operator\n  syntax\nNapisz `!py pomoc [komenda]` aby dostać dokładniejsze informacje.```")
         elif command_for_help == "czyść":
             await ctx.send("```Komenda czyść\n  czyść [liczba, domyślnie 5]\nCzyści n wiadomości z czatu.```")
         elif command_for_help == "ping":
@@ -62,12 +61,12 @@ class Utilities(commands.Cog):
             await ctx.send("```Komenda pomoc\n  pomoc\nWyświetla listę komend.```")
         elif command_for_help == "rzuć":
             await ctx.send("```Komenda rzuć\n  rzuć [liczba]\nRzuca kostką n-ścienną.```")
+        elif command_for_help == "operator":
+            await ctx.send("```Komenda operator\n  operator [operator]\nWyświetla krótki opis operatora. !py operator aby wyświetlić listę operatorów```")
         elif command_for_help == "syntax":
             await ctx.send("```Komenda syntax\n  syntax [wyrażenie]\nWyświetla krótki opis wyrażenia. !py syntax aby wyświetlić listę wyrażeń```")
         else:
             await ctx.send("```Nie znaleziono komendy.```")
-
-
 
 def setup(client):
     client.add_cog(Utilities(client))
