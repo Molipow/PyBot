@@ -11,8 +11,10 @@ class Example(commands.Cog):
         print('Example module loaded')
 
     @commands.command()
-    async def test(self, ctx):
-        await ctx.send("Test command, please ignore.")
+    async def riddle1(self, ctx):
+        await ctx.send(file=discord.File(fp="1.png" \
+        # , filename="1.png" \
+        ))
 
 def setup(client):
     client.add_cog(Example(client))
